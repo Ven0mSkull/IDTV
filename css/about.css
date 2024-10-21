@@ -1,0 +1,58 @@
+body {
+    background-image: url('../images/about.jpg');
+    background-size: cover;
+    background-position: center;
+    font-family: sans-serif;
+    text-align: center;
+    margin: 0;
+    padding: 0;
+    height: 100vh; /* Isso garante que a imagem de fundo cubra toda a altura da janela do navegador */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+hgroup {
+    color: white;
+    position: absolute; /* Use absolute positioning */
+    top: 250px; /* Ajuste a posição vertical conforme necessário */
+    left: 397px; /* Ajuste a posição horizontal conforme necessário */
+    padding: 0;
+    font-family: "Radio Canada Big", sans-serif;
+}
+
+h5 {
+    color: white;
+    position: absolute; /* Use absolute positioning */
+    top: 700px; /* Ajuste a posição vertical conforme necessário */
+    right: 750px; /* Ajuste a posição horizontal conforme necessário */
+    padding: 0;
+    font-family: "Radio Canada Big", sans-serif;
+}
+
+nav {
+    position: absolute;
+    top: 10px;
+    left: 10px;
+    z-index: 999; /* Garante que o nav fique acima de outros elementos */ 
+}
+
+nav ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+nav ul li {
+    display: inline;
+    margin-right: 20px;
+}
+
+nav ul li a {
+    text-decoration: none;
+    color: black;
+    font-size: 30px; /* Definindo o tamanho da fonte para 20 pixels */
+}
+
+nav ul li a:hover {
+    color: lightgray;
+}

@@ -1,0 +1,52 @@
+body {
+    background-color: #343239;
+    font-family: Arial, Helvetica, sans-serif;
+    overflow: hidden;
+    margin: 200px; /* Adiciona margem zero para alinhar corretamente */
+    margin-left: 250px;
+    margin-top: 0px;
+}
+
+@font-face {
+    font-family: 'Bearpaw';
+    src: url('../fonts/bearpaw.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
+h1 {
+    color: rgb(0, 0, 0);
+    position: absolute; /* Use absolute positioning */
+    top: 100px; /* Ajuste a posição vertical conforme necessário */
+    right: 400px; /* Ajuste a posição horizontal conforme necessário */
+    padding: 0;
+    font-size: 100px;
+    font-family: "Bearpaw", sans-serif;
+}
+.fita {
+    position: fixed;
+    bottom: 10px;
+    width: 650px;
+    margin-left: 390px;
+}
+nav ul {
+    list-style-type: none;
+    padding: 50;
+    margin: 50;
+    text-align: right;
+}
+
+nav ul li {
+    display: inline;
+    margin: 0px 45px 0px 35px;
+}
+
+nav ul li a {
+    text-decoration: none;
+    color: black;
+    font-family: 'Amatic SC', cursive;
+    font-size: 40px;
+}
+
+nav ul li a:hover {
+    color: blanchedalmond;
+}

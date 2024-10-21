@@ -1,0 +1,99 @@
+body {
+    background-color: #343239;
+    font-family: Arial, Helvetica, sans-serif;
+    overflow: hidden;
+    margin: 200px; /* Adiciona margem zero para alinhar corretamente */
+    margin-left: 200px;
+    margin-top: 0px;
+}
+
+.area-login {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin-left: 40px;
+}
+
+.Login {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: #e9ecf1ef;
+    width: 600px;
+    padding: 200px; /* Reduz o preenchimento interno */
+    border-radius: 160px; /* Adiciona borda arredondada */
+    height: 610px;
+}
+.Login form {
+    display: flex;
+    flex-direction: column;
+    width: 110%;
+}
+
+.Login input {
+    margin-top: 0px;
+    background-color: black;
+    padding-left: 10px;
+    color: #CBD0F7;
+    border: none;
+    height: 45px;
+    outline: none;
+    border-radius: 8px;
+}
+
+.Login img {
+    width: 250px; /* Aumenta a largura da logo c5ccc5 */
+    height: 280px; /* Mantém a proporção da altura */
+    margin-top: -120px;
+}
+
+input::placeholder {
+    color: #CBD0F7;
+    font-size: 18px;
+}
+
+form [type="submit"] {
+    display: block;
+    background-color: rgb(94, 34, 150);
+    font-size: 14px; /* Ajusta o tamanho da fonte */
+    text-transform: uppercase;
+    font-weight: bold;
+    cursor: pointer;
+    border: none; /* Remove a borda */
+    border-radius: 8px; /* Adiciona borda arredondada */
+    height: 45px; /* Mantém a altura igual aos inputs */
+    color: white; /* Muda a cor do texto para branco */
+    margin-top: 10px; /* Adiciona margem superior */
+}
+
+p {
+    color: rgb(0, 0, 0);
+}
+
+a {
+    text-decoration: none;
+    margin-left: 10px;
+    text-align: center;
+    color: #333; /* Cor do texto mais escura */
+}
+
+.cat {
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    width: 11vw;
+}
+
+#Help {
+    color: black; /* Define a cor do texto como branca */
+    position: fixed;
+    bottom: 0px; /* Distância em pixels da parte inferior da janela do navegador */
+    right: 200px; /* Distância em pixels da parte direita da janela do navegador */
+    font-size: 50px;
+    text-decoration: none;
+    font-family: 'Comic Sans MS', cursive; 
+}
+#Help:hover {
+    color: white; /* Altera a cor do texto para preto quando o mouse estiver sobre o elemento */
+}

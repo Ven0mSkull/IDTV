@@ -1,0 +1,47 @@
+IDTV 
+
+PAP 
+
+Estrutura de Pastas 
+Projeto Final 
+img - images 
+css - css 
+js - javascript 
+arquivos.html 
+
+Planeamento de Site com Vulnabirilidades 
+
+O que vai ser? e o Porque?
+
+Fazer um site que contenha certas vulnabirilidades Porque para pessoas que estão a começar 
+a gostar sobre cybersegurança e para elas praticarem nesse site como solucionar 
+e saber como defederem-se disso, também surgiu a ideia pelo fato de eu tambem ter começado a ver esses sites "Legalizados" que podiamos explorar na seguranca deles 
+Fazer um site HMTL ?
+    Ver videos em casa do Gustavo Guanabara
+    
+
+
+
+
+IDTY
+
+
+
+Vulnabirilidades no Site				Como defender  							
+							
+1º Brute Force  					Timeout a cade 3 tentativas 
+2º SQL injection				    Parameters 
+3º Cross Site Scripting (XSS)       
+4º Review Webserver Metafiles       escondendo melhor
+for Information Leakage(robot.txt)
+flag
+
+
+
+Capture the flag 
+O Governo quer guardar seus agentes mas como esse site supostamente era para ser secreto ele nao tem como ce tegistrar voce tera que ce virar para achar os logins ! 
+Entra na data base e descobre tudo sobre os agentes do governo e tudo que eles escondam!
+
+
+
+

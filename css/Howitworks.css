@@ -1,0 +1,65 @@
+body {
+    background-color: #343239;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    margin: 0;
+    padding: 0;
+    min-height: 91vh;
+    overflow: hidden;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+.cat {
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    width: 10vw;
+}
+
+.cortina {
+    position: fixed;
+    top: -2vh; /* Ajuste conforme necessário para a posição vertical */
+    left: 0vw; /* Ajuste conforme necessário para a posição horizontal */
+    width: 13vw; 
+}
+
+.rotated {
+    transform: rotate(335deg); /* Ajuste o ângulo conforme necessário */
+}
+
+#Help {
+    color: black; /* Define a cor do texto como preta */
+    position: fixed;
+    bottom: 10px; /* Distância em pixels da parte inferior da janela do navegador */
+    right: 160px; /* Distância em pixels da parte direita da janela do navegador */
+    font-size: 30px;
+    text-decoration: none;
+    font-family: 'Comic Sans MS', cursive;
+}
+
+#Help:hover {
+    color: white; /* Altera a cor do texto para branco quando o mouse estiver sobre o elemento */
+}
+
+hgroup {
+    color: white; 
+    margin-top: -200px;
+    padding: 0;
+    font-family: "Radio Canada Big", sans-serif;
+    text-align: center;
+}
+
+nav ul {
+    list-style-type: none; /* Remove marcadores da lista */
+    padding: 0; /* Remove padding da lista */
+    margin: 0; /* Remove margem da lista */
+}
+
+nav li {
+    margin: 0; /* Remove margem dos itens da lista */
+    padding: 0; /* Remove padding dos itens da lista */
+}
