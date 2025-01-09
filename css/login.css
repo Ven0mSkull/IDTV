@@ -119,5 +119,6 @@ header {
 
 /* Ajustar o login-container abaixo do header */
 .login-container {
-  margin-top: 80px; /* Espaço para o header fixo */
+  margin-top: 80px;
+  /* Espaço para o header fixo */
 }
