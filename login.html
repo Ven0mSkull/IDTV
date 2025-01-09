@@ -1,34 +1,33 @@
 <!DOCTYPE html>
-<html lang="Pt-en">
+<html lang="pt-br">
 <head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="css/login.css">
-    <title>Tela de Login</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Login</title>
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="login.css">
 </head>
+  
 <body>
-    <div class="cat">
-        <img src="images/catblack.png" alt="cat">
-    </div>
-    <section class="area-login">
-        <div class="Login">
-            <div>
-                <img class="logo" src="images/idtylogin.png" alt="Logo">
-            </div>
-            <form action="login2.php" method="POST">
-                <h1>Login</h1>
-                <input type="text" name="nome" placeholder="Nome do usuário">
-                <br><br>
-                <input type="password" name="senha" placeholder="Senha">
-                <br><br>
-                <input type="submit" name="submit" value="Entrar">
-            </form>
-            <p>Ainda não criou uma conta? <a href="naotedigo.html">Criar conta!</a></p>
-            <div>
-                <a href="help.html" id="Help">Help!</a>
-            </div>
-        </div>
-    </section>
+  <!-- Header com a logo -->
+  <header>
+    <a href="index.html" class="logo-link">
+      <img src="images/logo.jpg" alt="Logo" class="logo">
+    </a>
+  </header>
+
+  <div class="login-container">
+    <h1 class="login-title">Login</h1>
+    <form class="login-form" action="dashboard.html" method="post">
+      <label for="username">Usuário</label>
+      <input type="text" id="username" name="username" required>
+
+      <label for="password">Senha</label>
+      <input type="password" id="password" name="password" required>
+
+      <button type="submit" class="login-button">Entrar</button>
+    </form>
+    <p class="register-link">Ainda não tem uma conta? <a href="cadastro.html">Cadastre-se</a></p>
+  </div>
 </body>
 </html>
