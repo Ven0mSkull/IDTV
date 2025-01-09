@@ -1,0 +1,89 @@
+/* Estilo base */
+body {
+    background-color: #1e1e1e;
+    color: #fff;
+    font-family: 'Roboto', sans-serif;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    margin: 0;
+  }
+  
+  /* Container de cadastro */
+  .register-container {
+    background-color: #000;
+    padding: 30px 40px;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.6);
+    text-align: center;
+    width: 100%;
+    max-width: 400px;
+  }
+  
+  /* Título */
+  .register-title {
+    font-size: 2rem;
+    color: #00ff00;
+    margin-bottom: 20px;
+  }
+  
+  /* Estilo dos campos de input */
+  .register-form label {
+    display: block;
+    text-align: left;
+    margin: 10px 0 5px;
+    color: #00ff00;
+  }
+  
+  .register-form input {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 15px;
+    border: 1px solid #333;
+    border-radius: 5px;
+    background-color: #222;
+    color: #fff;
+    font-size: 1rem;
+    transition: border-color 0.3s;
+  }
+  
+  .register-form input:focus {
+    border-color: #00ff00;
+    outline: none;
+  }
+  
+  /* Botão de cadastro */
+  .register-button {
+    width: 100%;
+    padding: 12px;
+    background-color: #00ff00;
+    border: none;
+    border-radius: 5px;
+    color: #000;
+    font-weight: bold;
+    font-size: 1rem;
+    cursor: pointer;
+    transition: background-color 0.3s;
+  }
+  
+  .register-button:hover {
+    background-color: #39ff14;
+  }
+  
+  /* Link para login */
+  .login-link {
+    margin-top: 15px;
+    font-size: 0.9rem;
+  }
+  
+  .login-link a {
+    color: #00ff00;
+    text-decoration: none;
+    transition: color 0.3s;
+  }
+  
+  .login-link a:hover {
+    color: #39ff14;
+  }
+  
