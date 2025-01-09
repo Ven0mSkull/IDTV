@@ -1,0 +1,83 @@
+/* Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Roboto', sans-serif;
+    background-color: #0d0d0d;
+    color: #00ff00;
+    line-height: 1.6;
+    margin: 0;
+}
+
+/* Header */
+.header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background-color: #1a1a1a;
+    padding: 20px;
+    border-bottom: 2px solid #00ff00;
+}
+
+.logo img {
+    width: 50px;
+    height: 50px;
+}
+
+.logo h1 {
+    margin-left: 10px;
+    font-size: 1.5rem;
+    color: #00ff00;
+}
+
+/* Main Content */
+.help-content {
+    padding: 40px 20px;
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+h2, h3 {
+    color: #00ff00;
+    margin-bottom: 20px;
+}
+
+p {
+    color: #b0b0b0;
+    margin-bottom: 15px;
+}
+
+.faq-item h4 {
+    color: #00cc00;
+    margin-bottom: 5px;
+}
+
+.faq-item {
+    margin-bottom: 20px;
+    padding: 10px;
+    background-color: #1a1a1a;
+    border: 1px solid #00ff00;
+    border-radius: 5px;
+}
+
+/* Footer */
+.footer {
+    text-align: center;
+    background-color: #1a1a1a;
+    padding: 20px;
+    border-top: 2px solid #00ff00;
+    margin-top: 40px;
+}
+
+.footer a {
+    color: #00ff00;
+    text-decoration: none;
+}
+
+.footer a:hover {
+    text-decoration: underline;
+}

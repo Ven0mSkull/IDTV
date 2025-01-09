@@ -1,0 +1,46 @@
+/* General Styling */
+body {
+    font-family: 'Fira Code', monospace;
+    background-color: #0d1117;
+    color: #c9d1d9;
+    margin: 0;
+    padding: 0;
+}
+
+/* About Container */
+.about-container {
+    max-width: 800px;
+    margin: 250px auto;
+    padding: 20px;
+    background-color: #161b22;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 255, 0, 0.2);
+    text-align: center; /* Centraliza os elementos dentro do container */
+}
+
+/* Header */
+.about-header {
+    text-align: center;
+    color: #00ff00;
+    font-size: 2rem;
+    margin-bottom: 20px;
+}
+
+/* Text Content */
+.about-text {
+    line-height: 1.6;
+    font-size: 1rem;
+    margin-bottom: 15px;
+    text-align: justify;
+}
+
+.about-text strong {
+    color: #00ff00;
+}
+
+/* Hacker Image */
+.Hacker {
+    max-width: 100px; /* Limita o tamanho da imagem */
+    margin: 0 auto 100px auto; /* Centraliza a imagem horizontalmente e ajusta o espaço inferior */
+    display: block; /* Garante centralização com margin auto */
+}
