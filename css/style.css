@@ -18,7 +18,7 @@ body {
     margin: 0;
     padding: 0;
     position: relative;
-    overflow: hidden; /* Garante que nada ultrapasse os limites */
+    overflow: hidden; 
 }
 a {
 
@@ -64,7 +64,7 @@ header {
 
 .logo h1 {
     font-size: 1.5rem;
-    color: #00ff00;
+    color: #ffffff;
 }
 
 nav ul {
@@ -84,7 +84,7 @@ nav ul li a:hover {
 }
 
 nav ul li .cta {
-    background-color: #00ff00;
+    background-color: #ffffff;
     color: #0d0d0d;
     padding: 8px 12px;
     border-radius: 4px;
@@ -121,37 +121,6 @@ nav ul li .cta {
     display: flex;
     gap: 15px;
 }
-
-.btn-read,
-.btn-demo {
-    padding: 10px 20px;
-    font-size: 1rem;
-    font-weight: bold;
-    border: none;
-    cursor: pointer;
-    transition: background 0.3s;
-}
-
-.btn-read {
-    background-color: #00ff00;
-    color: #0d0d0d;
-}
-
-.btn-read:hover {
-    background-color: #00cc00;
-}
-
-.btn-demo {
-    background-color: #1a1a1a;
-    color: #00ff00;
-    border: 2px solid #00ff00;
-}
-
-.btn-demo:hover {
-    background-color: #00ff00;
-    color: #0d0d0d;
-}
-
 /* Footer */
 footer {
     background-color: #1a1a1a;
