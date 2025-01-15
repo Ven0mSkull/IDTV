@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+<!-- <!DOCTYPE html>
 <html lang="pt-br">
 <head>
   <meta charset="UTF-8">
@@ -7,7 +7,6 @@
   <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;700&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="/css/login.css">
 </head>
-  
 <body>
   <!-- Header com a logo -->
   <header>
@@ -16,18 +15,24 @@
     </a>
   </header>
 
-  <div class="login-container">
-    <h1 class="login-title">Login</h1>
-    <form class="login-form" action="dashboard.html" method="post">
-      <label for="username">Usuário</label>
-      <input type="text" id="username" name="username" required>
+  <!-- Popup de login -->
+  <div id="login-popup" class="popup-overlay">
+    <div class="popup-container">
+      <button id="close-popup" class="close-button">&times;</button>
+      <h1 class="login-title">Login</h1>
+      <form class="login-form" action="dashboard.html" method="post">
+        <label for="username">Usuário</label>
+        <input type="text" id="username" name="username" required>
 
-      <label for="password">Senha</label>
-      <input type="password" id="password" name="password" required>
+        <label for="password">Senha</label>
+        <input type="password" id="password" name="password" required>
 
-      <button type="submit" class="login-button">Entrar</button>
-    </form>
-    <p class="register-link">Ainda não tem uma conta? <a href="cadastro.html">Cadastre-se</a></p>
+        <button type="submit" class="login-button">Entrar</button>
+      </form>
+      <p class="register-link">Ainda não tem uma conta? <a href="cadastro.html">Cadastre-se</a></p>
+    </div>
   </div>
+
+  <script src="/js/popup.js"></script>
 </body>
 </html>

@@ -1,0 +1,60 @@
+/* Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Estilo base */
+body {
+    background-color: #1e1e1e;
+    color: #00ff00;
+    font-family: Arial, sans-serif;
+    text-align: center;
+    padding: 50px;
+}
+
+h1 {
+    font-size: 2rem;
+    margin-bottom: 20px;
+}
+
+p {
+    font-size: 1.1rem;
+    margin-bottom: 30px;
+}
+
+.hint {
+    color: #ff9900;
+    font-size: 1.2rem;
+    margin-top: 30px;
+}
+
+/* Botão oculto */
+.hidden-button {
+    display: none; /* Botão inicialmente oculto */
+    background-color: #00ff00;
+    color: #000;
+    padding: 10px 20px;
+    border: none;
+    font-weight: bold;
+    cursor: pointer;
+    margin-top: 20px;
+}
+
+/* Mensagem de sucesso */
+.hidden-message {
+    display: none;
+    margin-top: 20px;
+    color: #00ff00;
+}
+
+.hidden-message h2 {
+    font-size: 1.5rem;
+}
+
+/* Estilo do botão e interação */
+.hidden-button:hover {
+    background-color: #00cc00;
+    color: #000;
+}

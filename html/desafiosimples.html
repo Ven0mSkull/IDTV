@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Desafio Simples de Cibersegurança</title>
+    <link rel="stylesheet" href="desafiosimples.css">
+</head>
+<body>
+    <h1>Desafio Simples de Cibersegurança</h1>
+    <p>O desafio consiste em encontrar e clicar em um botão oculto. Para isso, você precisará usar as ferramentas de desenvolvedor do navegador.</p>
+    
+    <!-- Dica para o usuário -->
+    <p class="hint">Dica: Utilize as ferramentas de inspeção para encontrar algo escondido...</p>
+
+    <!-- Botão oculto -->
+    <button class="hidden-button" id="secretButton" onclick="showMessage()">Você conseguiu!</button>
+
+    <!-- Mensagem de sucesso -->
+    <div class="hidden-message" id="successMessage">
+        <h2>Parabéns! Você descobriu o botão oculto!</h2>
+    </div>
+
+    <script>
+        // Tornando o botão visível após 5 segundos, ou assim que o usuário inspecionar o código
+        setTimeout(function() {
+            document.querySelector('.hidden-button').style.display = 'inline-block';
+        }, 5000);  // Após 5 segundos, o botão será visível
+
+        // Função para mostrar mensagem de sucesso
+        function showMessage() {
+            document.getElementById('successMessage').style.display = 'block';
+        }
+    </script>
+</body>
+</html>
