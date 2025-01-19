@@ -25,12 +25,7 @@
                 <li><a href="Desafios.html">Desafios</a></li>
                 <li><a href="Ajuda.html">Ajuda</a></li>
                 <li><a href="Sobre.html">Sobre-nós</a></li>
-
-
-                
-                <li><a href="login.html" id="login-button">Login</a></li>
-                <!-- <li><a href="login.html">Login</a></li>-->
-                <li><a href="cadastro.html" class="cta">Cadastrar</a></li>
+                <li><a href="#" id="login-button">Login</a></li>
             </ul>
         </nav>
     </header>
@@ -64,23 +59,38 @@
         <p>This website uses cookies to enhance your experience. <a href="#learn-more">Learn more</a>.</p>
     </footer>
 
-    <script src="script.js"></script>
+    <!-- Popup de Login -->
+    <div id="login-popup" class="popup">
+        <div class="popup-content">
+            <button id="close-popup" class="close-button">×</button>
+            
+            <!-- Formulário de Login -->
+            <form id="login-form" action="../php/login.php" method="POST">
+                <h2>Login</h2>
+                <label for="username">Usuário:</label>
+                <input type="text" id="username" name="username" required>
+                <label for="password">Senha:</label>
+                <input type="password" id="password" name="password" required>
+                <button type="submit">Entrar</button>
+            </form>
 
-<!-- Popup de login  vou usar um-->
-<div id="login-popup" class="popup">
-    <div class="popup-content">
-        <button id="close-popup" class="close-button">×</button>
-        <form id="login-form"action=../php/processar_login.php>
-            <h2>Login</h2>
-            <label for="username">Usuário:</label>
-            <input type="text" id="username" name="username" required>
-            <label for="password">Senha:</label>
-            <input type="password" id="password" name="password" required>
-            <button type="submit" id="login-button">Entrar</button>
-        </form>
+            <!-- Link para Cadastro -->
+            <p>Não tem uma conta? <a href="#" id="show-register">Cadastre-se</a></p>
+
+            <!-- Formulário de Cadastro -->
+            <form id="register-form" class="hidden" action="../php/register.php" method="POST">
+                <h2>Cadastro</h2>
+                <label for="register-username">Usuário:</label>
+                <input type="text" id="register-username" name="username" required>
+                <label for="register-email">Email:</label>
+                <input type="email" id="register-email" name="email" required>
+                <label for="register-password">Senha:</label>
+                <input type="password" id="register-password" name="password" required>
+                <button type="submit">Cadastrar</button>
+            </form>
+        </div>
     </div>
-</div>
-<script src="/js/popup.js"></script>
 
+    <script src="/js/popup.js"></script>
 </body>
 </html>

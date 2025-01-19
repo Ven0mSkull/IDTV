@@ -1,24 +1,13 @@
 <?php
-$host = '127.0.0.1';
+$host = 'localhost';
 $dbname = 'idtv';
-$username = 'Guilherme';
-$password = 'password123';
+$user = 'Guilherme';
+$password = '';
 
 try {
-    $conn = new PDO("mysql:host=$host;dbname=$dbname;charset=utf8mb4", $username, $password);
+    $conn = new PDO("mysql:host=$host;dbname=$dbname", $user, $password);
     $conn->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
 } catch (PDOException $e) {
-    die("Erro ao conectar ao banco de dados: " . $e->getMessage());
-} 
-
-
-
-
-
-
-
-
-
-#ce loko nao compensa
-
-
+    die("Erro na conexão: " . $e->getMessage());
+}
+?>
