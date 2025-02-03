@@ -9,13 +9,6 @@
     <link href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css" rel="stylesheet">
 </head>
 <body>
-    <?php
-    session_start();
-    if (isset($_SESSION['login_error'])) {
-        echo "<p style='color: red; text-align: center;'>".$_SESSION['login_error']."</p>";
-        unset($_SESSION['login_error']);
-    }
-    ?>
     <div class="container">
         <div class="form-box login">
             <form action="process_login.php" method="POST">
