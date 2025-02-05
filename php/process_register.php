@@ -6,9 +6,18 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     $username = filter_input(INPUT_POST, 'username', FILTER_SANITIZE_STRING);
     $email = filter_input(INPUT_POST, 'email', FILTER_VALIDATE_EMAIL);
     $password = $_POST['password'];
+    $confirmPassword = $_POST['confirm_password'];
 
-    if (!$username || !$email || !$password) {
+    // Verifica se todos os campos foram preenchidos corretamente
+    if (!$username || !$email || !$password || !$confirmPassword) {
         $_SESSION['error'] = "Preencha todos os campos corretamente.";
+        header("Location: login.php");
+        exit();
+    }
+
+    // Verifica se as senhas coincidem
+    if ($password !== $confirmPassword) {
+        $_SESSION['error'] = "As senhas não coincidem.";
         header("Location: login.php");
         exit();
     }
