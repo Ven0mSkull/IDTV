@@ -14,26 +14,29 @@
 
 /* Body */
 body {
-    display: flex;
-    flex-direction: column;
-    min-height: 100vh;
     font-family: Arial, sans-serif;
     color: var(--color-text);
     margin: 0;
     padding: 0;
-    position: relative;
-    overflow-y: auto;
+    overflow-x: hidden;
 }
 
-/* Video Background */
+/* Seção com Vídeo de Fundo Fixo */
+.video-section {
+    position: relative;
+    height: 100vh; /* Altura da tela inteira */
+    overflow: hidden;
+}
+
 #background-video {
-    position: fixed;
+    position: absolute;
     top: 0;
     left: 0;
     width: 100%;
     height: 100%;
     object-fit: cover;
     z-index: -1;
+    opacity: 0.7; /* Transparência do vídeo */
 }
 
 /* Header */
@@ -94,9 +97,7 @@ nav ul li .cta {
     display: flex;
     align-items: center;
     justify-content: center;
-    padding: 100px 20px;
-    margin-top: 80px;
-    flex-grow: 1;
+    height: 100vh; /* Altura da tela inteira */
     text-align: center;
 }
 
@@ -114,100 +115,47 @@ nav ul li .cta {
     margin-bottom: 20px;
 }
 
-/* Popup */
-.popup {
-    display: none; /* Inicialmente escondido */
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background: rgba(0, 0, 0, 0.8);
-    z-index: 1000;
-    justify-content: center;
-    align-items: center;
+/* Conteúdo com Scroll */
+.content-section {
+    position: relative;
+    background: var(--color-background);
+    padding: 20px;
+    z-index: 1;
 }
 
-.popup.active {
-    display: flex; /* Torna visível quando a classe active é adicionada */
-    animation: fadeIn 0.3s ease-out;
+/* Retângulos para Texto */
+.text-boxes {
+    display: flex;
+    justify-content: space-around;
+    padding: 20px;
+    position: relative;
+    z-index: 1;
 }
 
-/* Adicionando uma classe para esconder com animação */
-.popup.hidden {
-    animation: fadeOut 0.3s ease-in;
-    animation-fill-mode: forwards; /* Mantém o estado final após a animação */
-}
-
-/* Animações para o popup */
-@keyframes fadeIn {
-    from {
-        opacity: 0;
-        transform: scale(0.9);
-    }
-    to {
-        opacity: 1;
-        transform: scale(1);
-    }
-}
-
-@keyframes fadeOut {
-    from {
-        opacity: 1;
-        transform: scale(1);
-    }
-    to {
-        opacity: 0;
-        transform: scale(0.9);
-    }
-}
-
-.popup-content {
-    background-color: #1e1e1e;
-    padding: 30px;
-    border-radius: 8px;
+.text-box {
+    background: rgba(26, 26, 26, 0.8); /* Fundo semi-transparente */
+    padding: 20px;
+    border-radius: 10px;
+    width: 30%;
     text-align: center;
-    width: 100%;
-    max-width: 400px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.6);
-    color: #fff;
-    transition: transform 0.3s ease, opacity 0.3s ease;
-    transform-origin: center;
-}
-
-.close-button {
-    position: absolute;
-    top: 20px;
-    right: 20px;
-    font-size: 1.5rem;
-    color: #fff;
-    cursor: pointer;
-}
-
-.close-button:hover {
-    color: var(--color-accent);
-}
-
-input {
-    width: 100%;
-    padding: 15px;
-    margin: 20px 0;
-    border: 1px solid #ccc;
-    border-radius: 5px;
-    background-color: #333;
     color: var(--color-text);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.6); /* Sombra para destacar */
 }
 
-button {
-    padding: 10px 20px;
-    background-color: var(--color-accent);
-    border: none;
-    color: var(--color-background);
-    cursor: pointer;
-    border-radius: 5px;
-    font-weight: bold;
+.text-box h3 {
+    font-size: 1.5rem;
+    margin-bottom: 10px;
+    color: var(--color-accent); /* Cor de destaque para o título */
 }
 
-button:hover {
-    background-color: #39ff14;
+.text-box p {
+    font-size: 1rem;
+    line-height: 1.5;
+}
+
+/* Footer */
+footer {
+    text-align: center;
+    padding: 20px;
+    background: rgba(0, 0, 0, 0.5);
 }
