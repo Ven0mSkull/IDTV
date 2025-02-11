@@ -50,6 +50,10 @@
                     <input type="password" name="password" placeholder="Password" required>
                     <i class='bx bxs-lock-alt'></i>
                 </div>
+                <div class="input-box">
+                    <input type="text" name="Confirm" placeholder="Confirm Password" required> 
+                    <i class='bx bxs-lock-alt'></i>
+            </div>
                 <button type="submit" class="btn">Register</button>
                 <p>or register with social platforms</p>
                 <div class="social-icons">
