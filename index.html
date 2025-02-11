@@ -5,61 +5,68 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>IDTV</title>
     <link rel="stylesheet" href="css/style.css">
-
+      <link href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css" rel="stylesheet">
 </head>
 <body>
-    <!-- Video Background -->
-    <video autoplay muted loop id="background-video">
-        <source src="videos/Backgroundvideo.mp4" type="video/mp4">
-        Seu navegador não suporta vídeos HTML5.
-    </video>
+    <!-- Seção Inicial com Vídeo de Fundo Fixo -->
+    <section class="video-section">
+        <video autoplay muted loop id="background-video">
+            <source src="videos/Backgroundvideo.mp4" type="video/mp4">
+            Seu navegador não suporta vídeos HTML5.
+        </video>
 
-    <!-- Navbar -->
-    <header>
-        <div class="logo">
-            <img src="images/logo.jpg" alt="Logo Hack Simulator">
-            <h1>IDTV</h1>
-        </div>
+        <header>
+            <div class="logo">
+                <img src="images/logo.png" alt="Logo IDTV">
+                <h1>IDTV</h1>
+            </div>
+        
+            <!-- Menu com retângulo atrás -->
+            <nav>
+                <ul>
+                    <li><a href="html/Desafios.html">Desafios</a></li>
+                    <li><a href="html/Ajuda.html">Ajuda</a></li>
+                    <li><a href="html/Sobre.html">Sobre</a></li>
+                    <li><a href="/php/login.ht" class="login-button">Login</a> </li>
+                    <i class='bx bxs-user'></i>
+                </ul>
+            </nav>
+        </header>
 
-        <nav>
-            <ul>
-                <li><a href="html/Desafios.html">Desafios</a></li>
-                <li><a href="html/Ajuda.html">Ajuda</a></li>
-                <li><a href="html/Sobre.html">Sobre-nós</a></li>
-                <li><a href="php/login.php">Login</a></li>
-            </ul>
-        </nav>
-    </header>
-
-    <!-- Main Content -->
-    <section class="hero">
-        <div class="hero-text">
-            <h2>Your Cyber Performance Center</h2>
-            <p>Aprenda sobre a cybersegurança com simples desafios</p>
+        <!-- Conteúdo da Seção Inicial -->
+        <div class="hero">
+            <div class="hero-text">
+                <h2>A Sua forma de aprender de se defender</h2>
+                <p>Porque a melhor defesa é o ataque</p>
+            </div>
         </div>
     </section>
 
-    <!-- Desafio Simples - Caixa do desafio 
-    <section class="challenge-box">
-        <h3>Desafio Simples</h3>
-        <p>Teste seus conhecimentos em cibersegurança encontrando um botão oculto na página. Use as ferramentas de desenvolvedor para inspecionar o código e descobrir o que está escondido.</p>
-        <button class="hidden-button" id="secretButton" onclick="showMessage()">Você conseguiu!</button>
-        <div class="hidden-message" id="successMessage">
-            <h2>Parabéns! Você descobriu o botão oculto!</h2>
+    <!-- Conteúdo com Scroll -->
+    <section class="content-section">
+        <!-- Retângulos para Texto -->
+        <div class="text-boxes">
+            <div class="text-box">
+                <h3>Desafio Simples</h3>
+                <p>Teste seus conhecimentos em cibersegurança encontrando um botão oculto na página.</p>
+            </div>
+            <div class="text-box">
+                <h3>Dicas</h3>
+                <p>Inspecione o código da página para encontrar o botão oculto.</p>
+            </div>
         </div>
-        <div class="hint">
-            <i class="material-icons">lightbulb_outline</i>
-            <p>Precisa de uma dica? Inspecione o código da página.</p>
-        </div>
-    </section>-->
 
-    <!-- Adicionando espaço para rolagem -->
-    <section style="height: 100vh;"></section>
+        <!-- Espaço para mais conteúdo -->
+        <div style="height: 1000px; background: rgba(0, 0, 0, 0.5); padding: 20px; color: white;">
+            <h3>Mais Conteúdo</h3>
+            <p>Role para baixo para ver mais conteúdo.</p>
+        </div>
+    </section>
 
     <footer>
         <p>This website uses cookies to enhance your experience. <a href="#learn-more">Learn more</a>.</p>
     </footer>
 
-    <script src="js/popup.js"></script>
+    <script src="js/script.js"></script>
 </body>
 </html>
