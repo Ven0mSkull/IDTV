@@ -48,7 +48,7 @@ header {
     width: 100%;
     z-index: 10;
     background-color:rgb(24, 22, 22);
-    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    font-family:monospace;
     position: fixed;
 }
 
@@ -96,14 +96,13 @@ nav ul li a {
     text-decoration: none;
     padding: 8px 12px; /* Espaçamento interno dos links */
     transition: background-color 0.3s ease; /* Transição suave ao passar o mouse */
-    
+
 }
 
 nav ul li a:hover {
     background-color: rgba(255, 255, 255, 0.1); /* Fundo ao passar o mouse */
     border-radius: 15px;
     color: var(--color-text); 
-
 }
 /* Estilo específico para o botão de Login */
 nav ul li .login-button {
@@ -115,7 +114,6 @@ nav ul li .login-button {
 
 nav ul li .login-button:hover {
     background-color: #0eff9a; /* Cor de fundo do botão Login */
-    
 }
 
 
@@ -136,6 +134,7 @@ nav ul li .login-button:hover {
     font-size: 3rem;
     margin-bottom: 20px;
     animation: slideInFromBottom 2s ease-out forwards; /* Animação de entrada */
+    font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
 }
 
 .hero-text p {
@@ -185,7 +184,7 @@ nav ul li .login-button:hover {
 footer {
     text-align: center;
     padding: 20px;
-    background: rgb(91, 165, 107);
+    background: rgb(40, 43, 40);
 }
 
 /* Animação de entrada para o h2 */
