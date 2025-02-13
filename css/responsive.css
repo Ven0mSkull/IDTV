@@ -216,6 +216,8 @@ form {
 .alert-error {
     background-color: #ffebee;
     color: #c62828;
+    left: 100px;
+
 }
 
 .alert-success {

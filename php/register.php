@@ -1,21 +1,59 @@
 <?php
+session_start();
 require 'db_connection.php';
 
 if ($_SERVER['REQUEST_METHOD'] === 'POST') {
-    $username = $_POST['username'];
-    $email = $_POST['email'];
-    $password = password_hash($_POST['password'], PASSWORD_BCRYPT);
+    $username = filter_input(INPUT_POST, 'username', FILTER_SANITIZE_STRING);
+    $email = filter_input(INPUT_POST, 'email', FILTER_VALIDATE_EMAIL);
+    $password = $_POST['password'];
+    $confirmPassword = $_POST['confirm_password'];
+
+    // Verifica se todos os campos foram preenchidos corretamente
+    if (!$username || !$email || !$password || !$confirmPassword) {
+        $_SESSION['error'] = "Preencha todos os campos corretamente.";
+        header("Location: login.html");
+        exit();
+    }
+
+    // Verifica se as senhas coincidem
+    if ($password !== $confirmPassword) {
+        $_SESSION['error'] = "As senhas não coincidem.";
+        header("Location: login.html");
+        exit();
+    }
+
+    // Verifica se o e-mail já existe
+    $sqlCheck = "SELECT * FROM usuarios WHERE email = :email";
+    $stmtCheck = $conn->prepare($sqlCheck);
+    $stmtCheck->execute([':email' => $email]);
+
+    if ($stmtCheck->rowCount() > 0) {
+        $_SESSION['error'] = "E-mail já está em uso.";
+        header("Location: login.html");
+        exit();
+    }
+
+    // Criptografa a senha
+    $hashedPassword = password_hash($password, PASSWORD_BCRYPT);
+
+    // Insere o novo usuário
+    $sqlInsert = "INSERT INTO usuarios (nome_usuario, email, senha) VALUES (:nome_usuario, :email, :senha)";
+    $stmtInsert = $conn->prepare($sqlInsert);
 
     try {
-        $stmt = $conn->prepare("INSERT INTO usuarios (username, email, password) VALUES (:username, :email, :password)");
-        $stmt->bindParam(':username', $username);
-        $stmt->bindParam(':email', $email);
-        $stmt->bindParam(':password', $password);
-        $stmt->execute();
+        $stmtInsert->execute([
+            ':nome_usuario' => $username,
+            ':email' => $email,
+            ':senha' => $hashedPassword,
+        ]);
 
-        echo "Registro realizado com sucesso!";
+        $_SESSION['success'] = "Cadastro realizado com sucesso! Faça login.";
+        header("Location: login.html");
+        exit();
     } catch (PDOException $e) {
-        echo "Erro ao registrar: " . $e->getMessage();
+        $_SESSION['error'] = "Erro interno no servidor.";
+        header("Location: login.html");
+        exit();
     }
 }
 ?>
