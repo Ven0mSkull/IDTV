@@ -23,12 +23,23 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     }
 
     // Verifica se o e-mail já existe
-    $sqlCheck = "SELECT * FROM usuarios WHERE email = :email";
-    $stmtCheck = $conn->prepare($sqlCheck);
-    $stmtCheck->execute([':email' => $email]);
+    $sqlCheckEmail = "SELECT * FROM usuarios WHERE email = :email";
+    $stmtCheckEmail = $conn->prepare($sqlCheckEmail);
+    $stmtCheckEmail->execute([':email' => $email]);
 
-    if ($stmtCheck->rowCount() > 0) {
+    if ($stmtCheckEmail->rowCount() > 0) {
         $_SESSION['error'] = "E-mail já está em uso.";
+        header("Location: login.php");
+        exit();
+    }
+
+    // Verifica se o username já existe
+    $sqlCheckUsername = "SELECT * FROM usuarios WHERE username = :username";
+    $stmtCheckUsername = $conn->prepare($sqlCheckUsername);
+    $stmtCheckUsername->execute([':username' => $username]);
+
+    if ($stmtCheckUsername->rowCount() > 0) {
+        $_SESSION['error'] = "Nome de usuário já está em uso.";
         header("Location: login.php");
         exit();
     }
@@ -37,14 +48,14 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     $hashedPassword = password_hash($password, PASSWORD_BCRYPT);
 
     // Insere o novo usuário
-    $sqlInsert = "INSERT INTO usuarios (nome_usuario, email, senha) VALUES (:nome_usuario, :email, :senha)";
+    $sqlInsert = "INSERT INTO usuarios (username, email, password) VALUES (:username, :email, :password)";
     $stmtInsert = $conn->prepare($sqlInsert);
 
     try {
         $stmtInsert->execute([
-            ':nome_usuario' => $username,
+            ':username' => $username,
             ':email' => $email,
-            ':senha' => $hashedPassword,
+            ':password' => $hashedPassword,
         ]);
 
         $_SESSION['success'] = "Cadastro realizado com sucesso! Faça login.";
