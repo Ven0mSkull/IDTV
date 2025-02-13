@@ -1,46 +1,91 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="pt-BR">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Guia de Desafios </title>
-  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;700&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="../css/desafios.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Desafios de Cybersecurity</title>
+    <link rel="stylesheet" href="../css/desafios.css">
 </head>
 <body>
+    <!-- Cabeçalho com Logo Animada -->
+    <header>
+        <div class="logo-container">
+            <img src="../images/logo1.png" alt="Logo" class="logo">
+        </div>
+        <h1>Desafios de Cybersecurity</h1>
+    </header>
 
-<!-- Header com a logo -->
-<header>
-  <a href="../../IDTV/index.html" class="logo-link">
-    <img src="../images/logo1.png" alt="Logo" class="logo">
-    <a href = "../Ajuda.html"></a>
-  </a>
-</header>
+    <!-- Lista de Desafios -->
+    <main>
+        <section class="challenges">
+            <div class="challenge-card">
+                <h2>Desafio 1: SQL Injection</h2>
+                <p>Explore uma vulnerabilidade de SQL Injection para acessar dados sensíveis.</p>
+                <a href="../php/login_vulneravel.php" class="btn">Iniciar Desafio</a>
+            </div>
 
-<!-- Menu lateral com os desafios -->
-<div class="sidebar">
-  <h2>Guia de Desafios</h2>
-  <a href="#desafio-1" class="active" id="link-1">Desafio 1</a>
-  <a href="#desafio-1p" id="link-1p">Desafio 2</a>
-  <a href="#desafio-2" id="link-2">Desafio 3</a>
-  <a href="#desafio-3" id="link-3">Desafio 4</a>
-  <a href="#desafio-4" id="link-4">Desafio 5</a>
-  <a href="#desafio-5" id="link-5">Desafio 6</a>
-  <a href="#desafio-6" id="link-6">Desafio 7</a>
-  <a href="#desafio-7" id="link-7">Desafio 8</a>
-  <a href="#desafio-8" id="link-8">Desafio 9</a>
-  <a href="#desafio-9" id="link-9">Desafio 10</a>
-</div>
+            <div class="challenge-card">
+                <h2>Desafio 2: Quebra de Senha</h2>
+                <p>Use técnicas de brute force para descobrir uma senha.</p>
+                <a href="#" class="btn">Iniciar Desafio</a>
+            </div>
 
-<!-- Área principal com o conteúdo -->
-<div class="content">
-  <div id="desafio-1">
-    <h3>Instruções para o Desafio 1</h3>
-    <p>Aqui estão as instruções para o Desafio 1. Neste desafio, sql injection.</p>
-  </div>
-</div>
+            <div class="challenge-card">
+                <h2>Desafio 3: XSS (Cross-Site Scripting)</h2>
+                <p>Explore uma vulnerabilidade de XSS para injetar scripts maliciosos.</p>
+                <a href="#" class="btn">Iniciar Desafio</a>
+            </div>
 
-<script src="desafios.js"></script>
+            <div class="challenge-card">
+                <h2>Desafio 4: Exploração de Serviços</h2>
+                <p>Identifique e explore serviços vulneráveis em um servidor.</p>
+                <a href="#" class="btn">Iniciar Desafio</a>
+            </div>
 
+            <div class="challenge-card">
+                <h2>Desafio 5: Análise de Tráfego</h2>
+                <p>Analise pacotes de rede para identificar atividades suspeitas.</p>
+                <a href="#" class="btn">Iniciar Desafio</a>
+            </div>
+
+            <div class="challenge-card">
+                <h2>Desafio 6: Engenharia Reversa</h2>
+                <p>Faça engenharia reversa de um binário para encontrar vulnerabilidades.</p>
+                <a href="#" class="btn">Iniciar Desafio</a>
+            </div>
+
+            <div class="challenge-card">
+                <h2>Desafio 7: Exploração de APIs</h2>
+                <p>Identifique e explore vulnerabilidades em uma API.</p>
+                <a href="#" class="btn">Iniciar Desafio</a>
+            </div>
+
+            <div class="challenge-card">
+                <h2>Desafio 8: Configuração de Firewall</h2>
+                <p>Configure um firewall para bloquear ataques.</p>
+                <a href="#" class="btn">Iniciar Desafio</a>
+            </div>
+
+            <div class="challenge-card">
+                <h2>Desafio 9: Análise de Malware</h2>
+                <p>Analise um malware para entender seu comportamento.</p>
+                <a href="#" class="btn">Iniciar Desafio</a>
+            </div>
+
+            <div class="challenge-card">
+                <h2>Desafio 10: Criptografia</h2>
+                <p>Decifre uma mensagem criptografada usando técnicas avançadas.</p>
+                <a href="#" class="btn">Iniciar Desafio</a>
+            </div>
+        </section>
+    </main>
+
+    <!-- Rodapé -->
+    <footer>
+        <p>&copy; 2023 Cybersecurity Challenges. Todos os direitos reservados.</p>
+    </footer>
+
+    <!-- Script para Animação da Logo -->
+    <script src="/desafios.js"></script>
 </body>
 </html>
