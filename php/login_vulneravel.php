@@ -41,14 +41,30 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
         </form>
 
         <h2>Objetivo do Desafio:</h2>
-        <p>Descubra o nome de um usuário na base de dados usando SQL Injection.</p>
+        <p>Descubra a senha do utilizador "admin" para acessar os dados</p>
 
         <h2>Dicas:</h2>
-        <ul>
-            <li>Tente usar <code>' OR '1'='1</code> no campo de senha.</li>
-            <li>Use <code>UNION SELECT</code> para extrair informações da base de dados.</li>
-            <li>O nome do usuário que você precisa descobrir começa com <code>john</code>.</li>
-        </ul>
+        <button id="showHintButton" class="hint-button">Mostrar Dica</button>
+        <div id="hint" style="display: none;">
+            <ul>
+                <li>Tente usar <code>' OR '1'='1</code> no campo de senha.</li>
+            </ul>
+        </div>
     </div>
+
+    <script>
+        // JavaScript para mostrar a dica ao clicar no botão
+        document.getElementById('showHintButton').addEventListener('click', function(event) {
+            event.preventDefault(); // Evita o comportamento padrão do botão
+            var hint = document.getElementById('hint');
+            if (hint.style.display === 'none') {
+                hint.style.display = 'block';
+                this.textContent = 'Ocultar Dica';
+            } else {
+                hint.style.display = 'none';
+                this.textContent = 'Mostrar Dica';
+            }
+        });
+    </script>
 </body>
 </html>
