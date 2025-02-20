@@ -294,6 +294,12 @@ footer a:hover {
     background-color: #00cc00; /* Verde mais escuro ao passar o mouse */
 }
 
-.Page h4 {
-    
+.btn {
+    background-color: #00ff00;
+    color: #ffffff;
+    padding: 10px 30px;
+    border-radius: 10px;
+}
+.btn:hover {
+    color: #ffffff;
 }
