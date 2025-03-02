@@ -5,19 +5,11 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Ajuda - Hack Simulator</title>
     <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;700&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="../css/Ajuda.css">
+    <link rel="stylesheet" href="/assets/css/Ajuda.css">
 </head>
 <body>
-    <!-- Cabeçalho -->
-    <header class="header">
-        <div class="logo">
-            <a href="../../IDTV/index.html">
-                <!--a href="../../IDTV/index.html"> Quando for pro xampp --> 
-                <img src="../images/logo1.png" alt="Logo Hack Simulator">
-            </a>
-            <h1>Hack Simulator - Ajuda</h1>
-        </div>
-    </header>
+    <!-- Inclui o cabeçalho -->
+    <?php include '../includes/header.php'; ?>
 
     <!-- Conteúdo Principal -->
     <main class="help-content">
@@ -30,7 +22,7 @@
             <h3>Perguntas Frequentes</h3>
             <div class="faq-item">
                 <h4>Como faço o registro na plataforma?</h4>
-                <p>Para voce fazer registro na plataforma basta clickar na pagina login que voce serà redirecionado tanto para o registro como pro login.</p>
+                <p>Para fazer registro na plataforma, basta clicar na página de login, onde você será redirecionado tanto para o registro quanto para o login.</p>
             </div>
             <div class="faq-item">
                 <h4>O que fazer se eu esquecer minha senha?</h4>
@@ -48,10 +40,7 @@
         </section>
     </main>
 
-    <!-- Rodapé -->
-    <footer class="footer">
-        <p>&copy; 2025 Hack Simulator. Todos os direitos reservados.</p>
-        <p><a href="../../index.html">Voltar para o início</a></p>
-    </footer>
+    <!-- Inclui o rodapé -->
+    <?php include '../includes/footer.php'; ?>
 </body>
 </html>
