@@ -9,7 +9,7 @@
 </head>
 <body>
     <!-- Inclui o cabeçalho -->
-    <?php include 'includes/header.php'; ?>
+    <?php include __DIR__ . '../assets/includes/header.php'; ?>
 
     <!-- Seção Inicial com Vídeo de Fundo Fixo -->
     <section class="video-section">
@@ -23,7 +23,7 @@
             <div class="hero-text">
                 <h2>Quer aprender sobre cibersegurança?</h2>
                 <p>Aprenda na pratica!</p>
-                <a href="assets/php/login.html" class="btn">Get</a>
+                <a href="php/login.php" class="btn">Get</a>
             </div>
         </div>
     </section>
@@ -54,7 +54,7 @@
     </section>
 
     <!-- Inclui o rodapé -->
-    <?php include 'includes/footer.php'; ?>
+    <?php include __DIR__ . '../assets/includes/footer.php'; ?>
 
     <script src="assets/js/script.js"></script>
 </body>

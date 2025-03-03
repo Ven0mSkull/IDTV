@@ -92,3 +92,24 @@ footer {
 footer p {
   color: #00ff00;
 }
+
+.logo {
+  animation: spin 4s linear infinite;
+}
+
+@keyframes spin {
+  0% { transform: rotate(0deg); }
+  100% { transform: rotate(360deg); }
+}
+
+.sidebar a.active {
+  font-weight: bold;
+}
+
+.content div {
+  display: none;
+}
+
+.content div:target {
+  display: block;
+}

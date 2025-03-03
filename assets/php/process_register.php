@@ -22,6 +22,25 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
         exit();
     }
 
+    // Verifica a força da senha
+    if (strlen($password) < 8) {
+        $_SESSION['error'] = "A senha deve ter pelo menos 8 caracteres.";
+        header("Location: login.php");
+        exit();
+    }
+
+    if (!preg_match("/[A-Z]/", $password)) {
+        $_SESSION['error'] = "A senha deve conter pelo menos uma letra maiúscula.";
+        header("Location: login.php");
+        exit();
+    }
+
+    if (!preg_match("/[0-9]/", $password)) {
+        $_SESSION['error'] = "A senha deve conter pelo menos um número.";
+        header("Location: login.php");
+        exit();
+    }
+
     // Verifica se o e-mail já existe
     $sqlCheckEmail = "SELECT * FROM usuarios WHERE email = :email";
     $stmtCheckEmail = $conn->prepare($sqlCheckEmail);

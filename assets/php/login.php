@@ -57,7 +57,7 @@
                     <i class='bx bxs-lock-alt'></i>
                 </div>
                 <div class="input-box">
-                    <input type="password" name="Confirm" placeholder="Confirmar senha" required> 
+                    <input type="password" name="confirm_password" placeholder="Confirmar senha" required> 
                     <i class='bx bxs-lock-alt'></i>
                 </div>
                 <button type="submit" class="btn">Registrar</button>
