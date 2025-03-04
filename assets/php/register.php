@@ -11,14 +11,14 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     // Verifica se todos os campos foram preenchidos corretamente
     if (!$username || !$email || !$password || !$confirmPassword) {
         $_SESSION['error'] = "Preencha todos os campos corretamente.";
-        header("Location: login.html");
+        header("Location: login.php");
         exit();
     }
 
     // Verifica se as senhas coincidem
     if ($password !== $confirmPassword) {
         $_SESSION['error'] = "As senhas não coincidem.";
-        header("Location: login.html");
+        header("Location: login.php");
         exit();
     }
 
@@ -29,7 +29,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
 
     if ($stmtCheck->rowCount() > 0) {
         $_SESSION['error'] = "E-mail já está em uso.";
-        header("Location: login.html");
+        header("Location: login.php");
         exit();
     }
 
@@ -48,7 +48,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
         ]);
 
         $_SESSION['success'] = "Cadastro realizado com sucesso! Faça login.";
-        header("Location: login.html");
+        header("Location: login.php");
         exit();
     } catch (PDOException $e) {
         $_SESSION['error'] = "Erro interno no servidor.";

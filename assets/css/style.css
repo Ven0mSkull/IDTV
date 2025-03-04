@@ -197,6 +197,7 @@ footer a:hover {
         transform: translateY(0);
     }
 }
+
 /* Camada escura sobre o vídeo */
 .video-overlay {
     position: absolute;
@@ -294,12 +295,15 @@ footer a:hover {
     background-color: #00cc00; /* Verde mais escuro ao passar o mouse */
 }
 
+/* Botão Genérico */
 .btn {
-    background-color: #00ff00;
-    color: #ffffff;
+    background-color: var(--color-primary); /* Verde */
+    color: var(--color-background); /* Preto */
     padding: 10px 30px;
     border-radius: 10px;
+    transition: background-color 0.3s ease;
 }
+
 .btn:hover {
-    color: #ffffff;
+    background-color: #00cc00; /* Verde mais escuro ao passar o mouse */
 }
