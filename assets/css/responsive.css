@@ -255,12 +255,6 @@ form {
     color: var(--color-background); /* Preto */
 }
 
-.video-section {
-    position: relative;
-    height: 100vh;
-    overflow: hidden;
-}
-
 #background-video {
     position: absolute;
     top: 0;

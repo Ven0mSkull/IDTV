@@ -1,46 +1,87 @@
 <!DOCTYPE html>
-<html lang="pt-BR">
+<html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Ajuda - Hack Simulator</title>
-    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;700&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="/assets/css/Ajuda.css">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Central de Ajuda - IDTV</title>
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="../css/ajuda.css">
 </head>
 <body>
-    <!-- Inclui o cabeçalho -->
-    <?php include '../includes/header.php'; ?>
+  <!-- Header -->
+  <header>
+    <div class="logo">
+      <a href="/IDTV/index.php">
+        <img src="/IDTV/assets/images/logo1.png" alt="Logo IDTV">
+      </a>
+      <h1>I Dont tell you the Vulnerability</h1>
+    </div>
+    <nav>
+      <ul>
+        <li><a href="/IDTV/index.php">Início</a></li>
+        <li><a href="/IDTV/assets/pages/Desafios.html">Desafios</a></li>
+        <li><a href="/IDTV/assets/pages/CentralAjuda.html">Ajuda</a></li>
+        <li><a href="/IDTV/assets/pages/Sobre.html">Sobre</a></li>
+        <li><a href="/IDTV/assets/php/login.php" class="login-button">Login</a></li>
+      </ul>
+    </nav>
+  </header>
 
-    <!-- Conteúdo Principal -->
-    <main class="help-content">
-        <section class="introduction">
-            <h2>Bem-vindo à Central de Ajuda</h2>
-            <p>Aqui você encontrará informações úteis para navegar e usar nossa plataforma. Se precisar de suporte adicional, entre em contato conosco.</p>
-        </section>
+  <!-- Conteúdo da Central de Ajuda -->
+  <main class="help-center">
+    <h2>Central de Ajuda</h2>
+    <p class="intro">Aqui você encontra guias detalhados para cada desafio. Clique em um desafio para ver as explicações!</p>
 
-        <section class="faq">
-            <h3>Perguntas Frequentes</h3>
-            <div class="faq-item">
-                <h4>Como faço o registro na plataforma?</h4>
-                <p>Para fazer registro na plataforma, basta clicar na página de login, onde você será redirecionado tanto para o registro quanto para o login.</p>
-            </div>
-            <div class="faq-item">
-                <h4>O que fazer se eu esquecer minha senha?</h4>
-                <p>Você pode redefinir sua senha clicando no link "Esqueceu sua senha?" na página de login.</p>
-            </div>
-            <div class="faq-item">
-                <h4>Como começo a resolver os desafios?</h4>
-                <p>Acesse a página "Desafios" pelo menu principal e escolha o desafio que deseja enfrentar.</p>
-            </div>
-        </section>
+    <div class="challenge-tabs">
+      <div class="tab" data-target="challenge-1">
+        <h3>Desafio 1 - SQL Injection</h3>
+      </div>
+      <div class="tab" data-target="challenge-2">
+        <h3>Desafio 2 - XSS Básico</h3>
+      </div>
+      <div class="tab" data-target="challenge-3">
+        <h3>Desafio 3 - Brute Force</h3>
+      </div>
+      <!-- Adicione mais abas até o Desafio 10 conforme necessário -->
+    </div>
 
-        <section class="contact">
-            <h3>Contato</h3>
-            <p>Se precisar de ajuda adicional, entre em contato conosco pelo e-mail: <a href="mailto:support@hacksimulator.com">support@hacksimulator.com</a>.</p>
-        </section>
-    </main>
+    <div class="challenge-content">
+      <div id="challenge-1" class="content active">
+        <h3>Desafio 1 - SQL Injection</h3>
+        <p>Este desafio testa sua capacidade de explorar vulnerabilidades de injeção SQL. O objetivo é manipular uma consulta SQL para acessar dados não autorizados.</p>
+        <ul>
+          <li><strong>Dica 1:</strong> Tente usar <code>' OR '1'='1</code> no campo de login.</li>
+          <li><strong>Dica 2:</strong> Observe como o sistema responde a entradas inválidas.</li>
+          <li><strong>Solução:</strong> Use <code>admin' --</code> para ignorar a verificação de senha.</li>
+        </ul>
+      </div>
+      <div id="challenge-2" class="content">
+        <h3>Desafio 2 - XSS Básico</h3>
+        <p>Aqui você deve injetar um script malicioso em um campo de entrada para executar código no navegador.</p>
+        <ul>
+          <li><strong>Dica 1:</strong> Experimente <code>&lt;script&gt;alert('XSS')&lt;/script&gt;</code>.</li>
+          <li><strong>Dica 2:</strong> Veja se o sistema filtra tags HTML.</li>
+          <li><strong>Solução:</strong> Use um script simples que mostre uma mensagem.</li>
+        </ul>
+      </div>
+      <div id="challenge-3" class="content">
+        <h3>Desafio 3 - Brute Force</h3>
+        <p>O objetivo é descobrir uma senha testando várias combinações.</p>
+        <ul>
+          <li><strong>Dica 1:</strong> Use uma lista de senhas comuns (ex.: "123456").</li>
+          <li><strong>Dica 2:</strong> Automatize com um script simples se permitido.</li>
+          <li><strong>Solução:</strong> A senha é "password123".</li>
+        </ul>
+      </div>
+      <!-- Adicione mais conteúdos até o Desafio 10 -->
+    </div>
+  </main>
 
-    <!-- Inclui o rodapé -->
-    <?php include '../includes/footer.php'; ?>
+  <!-- Footer -->
+  <footer>
+    <p>This website uses cookies to enhance your experience. <a href="#learn-more">Learn more</a>.</p>
+  </footer>
+
+  <script src="../js/central-ajuda.js"></script>
 </body>
 </html>

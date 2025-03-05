@@ -1,32 +1,55 @@
 <!DOCTYPE html>
-<html lang="pt-BR">
+<html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Desafios de Cybersecurity</title>
-    <link rel="stylesheet" href="../css/desafios.css">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Guia de Desafios </title>
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="../css/desafios.css">
 </head>
 <body>
-    <!-- Inclui o cabeçalho -->
-    <?php include '../includes/header.php'; ?>
 
-    <!-- Lista de Desafios -->
-    <main>
-        <section class="challenges">
-            <div class="challenge-card">
-                <h2>Desafio 1: SQL Injection</h2>
-                <p>Explore uma vulnerabilidade de SQL Injection para acessar dados sensíveis.</p>
-                <a href="../php/login_vulneravel.php" class="btn">Iniciar Desafio</a>
-            </div>
+<!-- Header com a logo -->
+<header>
+  <a href="/IDTV/index.php" class="logo-link">
+    <img src="../images/logo1.png" alt="Logo" class="logo">
+    <a href = "../Ajuda.html"></a>
+  </a>
+</header>
 
-            <!-- Repetir para outros desafios -->
-        </section>
-    </main>
+<!-- Menu lateral com os desafios -->
+<div class="sidebar">
+  <h2>Guia de Desafios</h2>
+  <a href="#desafio-1" class="active" id="link-1">Desafio 1</a>
+  <a href="#desafio-1" id="link-1p">Desafio 2</a>
+  <a href="#desafio-2" id="link-2">Desafio 3</a>
+  <a href="#desafio-3" id="link-3">Desafio 4</a>
+  <a href="#desafio-4" id="link-4">Desafio 5</a>
+  <a href="#desafio-5" id="link-5">Desafio 6</a>
+  <a href="#desafio-6" id="link-6">Desafio 7</a>
+  <a href="#desafio-7" id="link-7">Desafio 8</a>
+  <a href="#desafio-8" id="link-8">Desafio 9</a>
+  <a href="#desafio-9" id="link-9">Desafio 10</a>
+</div>
 
-    <!-- Inclui o rodapé -->
-    <?php include '../includes/footer.php'; ?>
+<!-- Área principal com o conteúdo -->
+<div class="content">
+  <div id="desafio-1">
+    <h3>Instruções para o Desafio 1</h3>
+    <p>Aqui estão as instruções para o Desafio 1. Neste desafio, sql injection.</p>
+  </div>
+  <div id="desafio-1p" style="display:none;">
+    <h3>Instruções para o Desafio 2</h3>
+    <p>Aqui estão as instruções para o Desafio 2.</p>
+  </div>
+  <div id="desafio-2" style="display:none;">
+    <h3>Instruções para o Desafio 3</h3>
+    <p>Aqui estão as instruções para o Desafio 3.</p>
+  </div>
+  <!-- Adicione mais divs para os outros desafios conforme necessário -->
+</div>
 
-    <!-- Script para Animação da Logo -->
-    <script src="../js/desafios.js"></script>
+<script src="/IDTV/assets/js/desafios.js"></script>
+
 </body>
 </html>

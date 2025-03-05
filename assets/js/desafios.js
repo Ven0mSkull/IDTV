@@ -1,28 +1,41 @@
-// Função para trocar entre os conteúdos dos desafios
-const links = document.querySelectorAll('.sidebar a');
-const contents = document.querySelectorAll('.content div');
-// Animação da Logo
-const logo = document.querySelector('.logo');
+document.addEventListener('DOMContentLoaded', () => {
+  const links = document.querySelectorAll('.sidebar a');
+  const contents = document.querySelectorAll('.content div');
+  const sidebar = document.querySelector('.sidebar');
+  let toggleBtn;
 
-links.forEach(link => {
-  link.addEventListener('click', function(event) {
-    event.preventDefault();
+  // Cria o botão de toggle para mobile
+  if (window.innerWidth <= 768) {
+    toggleBtn = document.createElement('button');
+    toggleBtn.className = 'toggle-btn';
+    toggleBtn.textContent = '☰ Menu';
+    document.body.appendChild(toggleBtn);
 
-    // Remover a classe active de todos os links e conteúdos
-    links.forEach(link => link.classList.remove('active'));
-    contents.forEach(content => content.style.display = 'none');
+    toggleBtn.addEventListener('click', () => {
+      sidebar.classList.toggle('active');
+    });
+  }
 
-    // Adicionar a classe active ao link clicado e exibir o conteúdo correspondente
-    this.classList.add('active');
-    const target = document.querySelector(this.getAttribute('href'));
-    target.style.display = 'block';
+  // Controle dos links
+  links.forEach(link => {
+    link.addEventListener('click', (e) => {
+      e.preventDefault(); // Evita comportamento padrão do :target
+      links.forEach(l => l.classList.remove('active'));
+      link.classList.add('active');
+
+      contents.forEach(content => content.style.display = 'none');
+      const targetId = link.getAttribute('href').substring(1);
+      const targetContent = document.getElementById(targetId);
+      targetContent.style.display = 'block';
+
+      // Fecha a sidebar em mobile após clique
+      if (window.innerWidth <= 768) {
+        sidebar.classList.remove('active');
+      }
+    });
   });
-});
 
-logo.addEventListener('mouseover', () => {
-    logo.style.animationPlayState = 'paused';
-});
-
-logo.addEventListener('mouseout', () => {
-    logo.style.animationPlayState = 'running';
+  // Mostra o primeiro desafio por padrão
+  document.getElementById('desafio-1').style.display = 'block';
+  document.getElementById('link-1').classList.add('active');
 });
